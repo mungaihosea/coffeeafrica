@@ -25,7 +25,7 @@ SECRET_KEY = 'g0^=d6ik67&&!flqhxbhjce)(^z_-=kyifqej71a^v$7tlrqg@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['coffeeafrica.net','50.19.35.4','ec2-50-19-35-4.compute-1.amazonaws.com']
 
 
 # Application definition
