@@ -132,12 +132,6 @@ def dashboard(request):
         return render(request, "buyer_dashboard.html", context)
 
 
-def create_account(request):
-    factory_queryset = SellerFactory.objects.all()
-    return render(
-        request, "create_seller_account.html", {"factory_queryset": factory_queryset}
-    )
-
 
 class Notification:
     def __init__(self, type, action, messsage, id, app_name):
@@ -153,3 +147,66 @@ class GetFactoriesView(View):
         context = {"factories": SellerFactory.objects.all()}
         return render(request, "factories.html", context)
 
+def create_account(request):
+    logout(request)
+    return render(request, "create_account.html", {})
+
+def create_buyer_account(request):
+    if request.method == "POST":
+        print(request.POST)
+        if request.POST['username'] and request.POST['email'] and request.POST['pass'] and request.POST['repeatpass'] and request.POST['country'] and request.POST['address'] and request.POST['phone']:
+            print("they all came in ")
+            email = request.POST['email']
+            username = request.POST['username']
+            password = request.POST['pass']
+            repeat_password = request.POST['repeatpass']
+            country = request.POST['country']
+            phone = request.POST['phone']
+            address = request.POST['address']
+            profile_photo = request.POST['profilepicture']
+            email_queryset = User.objects.filter(email = email)
+            if email_queryset.__len__() == 0:
+                if password == repeat_password:
+                    user = User.objects.create(username = username, email = email)
+                    user.set_password(password)
+                    user.save()
+                    buyer = Buyer.objects.create(user = user ,country = country, address = address, profile_picture = profile_photo, phone = phone)
+                    buyer.save()
+                    return render(request, 'account_success.html', {})
+                else:
+                    print('passwords do not match')
+            else:
+                print("a user with that email already exists")
+            
+
+    return render(request, 'create_buyer_account.html', {})
+
+def create_seller_account(request):
+    if request.method == "POST":
+        if request.POST['factoryphone'] and request.POST['factoryemail'] and request.POST['factoryname'] and request.POST['tradelicense'] and request.POST["factorylogo"] and request.POST['username'] and request.POST['email'] and request.POST['pass'] and request.POST['repeatpass'] and request.POST['country'] and request.POST['address'] and request.POST['phone']:
+            if request.POST['pass'] == request.POST['repeatpass']:
+                factory = SellerFactory.objects.create(factory_name = request.POST['factoryname'], factory_email=request.POST['factoryemail'], phone = request.POST['factoryphone'], country = request.POST['country'], trade_license = request.POST['tradelicense'], factory_logo = request.POST['factorylogo'])
+                email = request.POST['email']
+                username = request.POST['username']
+                password = request.POST['pass']
+                repeat_password = request.POST['repeatpass']
+                country = request.POST['country']
+                phone = request.POST['phone']
+                address = request.POST['address']
+                profile_photo = request.POST['profilepicture']
+                email_queryset = User.objects.filter(email = email)
+                company_email_queryset = SellerFactory.objects.filter(factory_email = email)
+                if email_queryset.__len__() == 0 and company_email_queryset.__len__() == 0:
+                    if password == repeat_password:
+                        user = User.objects.create(username = username, email = email)
+                        user.set_password(password)
+                        user.save()
+                        SellerFactoryEmployee.objects.create(factory = factory, user = user, country = country, address = address, profile_picture = profile_photo, phone = phone)
+                        return render(request, 'account_success.html', {})
+                    else:
+                        print('passwords do not match')
+                else:
+                    print("a user with that email already exists")
+            else:
+                print("passwords do not match")
+    return render(request, "create_seller_account.html", {})
