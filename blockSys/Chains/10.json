@@ -1,0 +1,69 @@
+[
+    {
+        "index": 0,
+        "previous hash": null,
+        "dificulty": 0,
+        "work level": 0,
+        "data": {
+            "blockType": "Genesis Block"
+        },
+        "hash": "0dff3409342d0d8b219a234d6fd45a05d4c777b1180055fe56e32af8ca3a95df"
+    },
+    {
+        "index": 1,
+        "previous hash": "0dff3409342d0d8b219a234d6fd45a05d4c777b1180055fe56e32af8ca3a95df",
+        "dificulty": 2,
+        "work level": 524,
+        "data": {
+            "id": 10,
+            "auction_id": 4,
+            "amount": "1",
+            "status": 0,
+            "date_placed": "2020/2/3",
+            "expected_date": "2020-02-04",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": null,
+            "shipping_id": null
+        },
+        "hash": "005aea0951a91a59c850120a88a2a3862905d3f5734c7e60d7b05141970ca8d0"
+    },
+    {
+        "index": 2,
+        "previous hash": "005aea0951a91a59c850120a88a2a3862905d3f5734c7e60d7b05141970ca8d0",
+        "dificulty": 2,
+        "work level": 269,
+        "data": {
+            "id": 10,
+            "auction_id": 4,
+            "amount": 1,
+            "status": 1,
+            "date_placed": "2020/2/3",
+            "expected_date": "2020/2/4",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": null,
+            "shipping_id": null
+        },
+        "hash": "008b41041726dabc96e534d97327670e8bd899f3b9ebfb0cf2239fd2681d6c91"
+    },
+    {
+        "index": 3,
+        "previous hash": "008b41041726dabc96e534d97327670e8bd899f3b9ebfb0cf2239fd2681d6c91",
+        "dificulty": 2,
+        "work level": 210,
+        "data": {
+            "id": 10,
+            "auction_id": 4,
+            "amount": 1,
+            "status": 2,
+            "date_placed": "2020/2/3",
+            "expected_date": "2020/2/4",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": null,
+            "shipping_id": "t-5353jkdf"
+        },
+        "hash": "0076a5e8a22e73eea5fc5726b2e953441631292e25d62acc4a529732c11b4b57"
+    }
+]

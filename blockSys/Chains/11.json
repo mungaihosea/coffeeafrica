@@ -1,0 +1,88 @@
+[
+    {
+        "index": 0,
+        "previous hash": null,
+        "dificulty": 0,
+        "work level": 0,
+        "data": {
+            "blockType": "Genesis Block"
+        },
+        "hash": "0dff3409342d0d8b219a234d6fd45a05d4c777b1180055fe56e32af8ca3a95df"
+    },
+    {
+        "index": 1,
+        "previous hash": "0dff3409342d0d8b219a234d6fd45a05d4c777b1180055fe56e32af8ca3a95df",
+        "dificulty": 2,
+        "work level": 1238,
+        "data": {
+            "id": 11,
+            "auction_id": 5,
+            "amount": "2",
+            "status": 0,
+            "date_placed": "2020/2/3",
+            "expected_date": "2020-01-27",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": null,
+            "shipping_id": null
+        },
+        "hash": "002232826d9464ca34f013558d5e5a9317c901cf1b25ca967e95408a74622e6a"
+    },
+    {
+        "index": 2,
+        "previous hash": "002232826d9464ca34f013558d5e5a9317c901cf1b25ca967e95408a74622e6a",
+        "dificulty": 2,
+        "work level": 14,
+        "data": {
+            "id": 11,
+            "auction_id": 5,
+            "amount": 2,
+            "status": 1,
+            "date_placed": "2020/2/3",
+            "expected_date": "2020/1/27",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": null,
+            "shipping_id": null
+        },
+        "hash": "00d53981cec96bb25b33b2b28ea30afb52b115d8c5be557c347411d148136130"
+    },
+    {
+        "index": 3,
+        "previous hash": "00d53981cec96bb25b33b2b28ea30afb52b115d8c5be557c347411d148136130",
+        "dificulty": 2,
+        "work level": 48,
+        "data": {
+            "id": 11,
+            "auction_id": 5,
+            "amount": 2,
+            "status": 2,
+            "date_placed": "2020/2/3",
+            "expected_date": "2020/1/27",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": "santa-ana Quebec CANADA 24th street",
+            "shipping_id": "t-5353jkdf"
+        },
+        "hash": "00e8e3c4c0d59e465a6c5829eae892bcaed52383b7fe7a9abbc16caba64651c4"
+    },
+    {
+        "index": 4,
+        "previous hash": "00e8e3c4c0d59e465a6c5829eae892bcaed52383b7fe7a9abbc16caba64651c4",
+        "dificulty": 2,
+        "work level": 22,
+        "data": {
+            "id": 11,
+            "auction_id": 5,
+            "amount": 2,
+            "status": 3,
+            "date_placed": "2020/2/3",
+            "expected_date": "2020/1/27",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": "santa-ana Quebec CANADA 24th street",
+            "shipping_id": "t-5353jkdf"
+        },
+        "hash": "008c10a3d63f37eca4dd0d0c22f4fd1619fc05c978632e34e654143a9b5a37cf"
+    }
+]

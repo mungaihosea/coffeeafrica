@@ -1,0 +1,103 @@
+{% load static %}
+<!-- LEFT SIDEBAR -->
+<div id="sidebar-nav" class="sidebar" style="background-color: rgb(48, 46, 46); padding-left: 2px; padding-right: 2px">
+  <div class="dark-l">
+    <div class="sidebar-scroll">
+      <nav>
+        <ul class="nav">
+          <li style="margin-top: 2px;">
+            <a href="/dashboard/" id="home">
+              <i class=" lnr lnr-home"></i>
+              <span>Dashbord</span>
+            </a>
+          </li>
+          <li>
+            {%if not user.sellerfactoryemployee.factory.factory_name%}
+            <a href="{% url 'transactions:view_market' %}" id="market"><i class=" lnr lnr-code"></i>
+              <span>Market</span></a>
+            {%else%}
+          <li>
+            <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i>
+              <span>Auction</span>
+              <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+            <div id="subPages" class="collapse ">
+              <ul class="nav">
+                <li><a href="{% url 'transactions:add_auction' %}" class="">Create a new Auction </a></li>
+                <li><a href="{% url 'transactions:auction_history' user.sellerfactoryemployee.factory.factory_name%}" class="">View Auction History</a></li>
+                <li><a href="page-lockscreen.html" class="">Manage Auction</a></li>
+              </ul>
+            </div>
+          </li>
+          {%endif%}
+          </li>
+          <li>
+            {%if user.sellerfactoryemployee%}
+            <a href="{%url 'transactions:charts' user.sellerfactoryemployee.factory.factory_name%}" id="charts"
+              class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a>
+            {%else%}
+            <a href="{% url 'transactions:bcharts' user %}" id="charts"><i class="lnr lnr-chart-bars"></i>
+              <span>Charts</span></a>
+            {%endif%}
+          </li>
+          <script>
+            document.getElementById('home').onclick = function ()
+            {
+              showLoading()
+            }
+            document.getElementById('charts').onclick = function ()
+            {
+              showLoading()
+            }
+            document.getElementById('market').onclick = function ()
+            {
+              showLoading()
+            }
+            document.getElementById('auction').onclick = function ()
+            {
+              showLoading()
+            }
+            if (document.URL.includes('dash'))
+            {
+              home = document.getElementById('home')
+              home.classList.add('active')
+            } else if (document.URL.includes('charts'))
+            {
+              charts = document.getElementById('charts')
+              charts.classList.add('active')
+            } else if (document.URL.includes('auction'))
+            {
+              auction = document.getElementById('auction')
+              auction.classList.add('active')
+            } else if (document.URL.includes('market'))
+            {
+              auction = document.getElementById('market')
+              auction.classList.add('active')
+            }
+          </script>
+          {%if user.sellerfactoryemployee.factory.factory_name%}
+          <li>
+            <a href="{%url 'transactions:showtransactions' user.sellerfactoryemployee.factory.factory_name%}" class=""><i class="lnr lnr-cog"></i> <span>Transactions</span></a>
+          </li>
+          {%else%}
+          <li>
+            <a href="{%url 'transactions:showtransactions' user%}" class=""><i class="lnr lnr-cog"></i> <span>Transactions</span></a>
+          </li>
+          {%endif%}
+          <li>
+            <a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a>
+          </li>
+          <li>
+            <a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Blog</span></a>
+          </li>
+          <li>
+            <a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Feedback</span></a>
+          </li>
+          <li>
+            <a href="/" class=""><i class="lnr lnr-home"></i> <span>Home</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- END LEFT SIDEBAR -->

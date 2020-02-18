@@ -1,0 +1,242 @@
+.label-error {
+    background-color: red;
+    color: white;
+}
+
+.label-bold {
+    font-weight: bold;
+    font-family: ubuntu;
+}
+
+.table-des {
+    column-gap: 100px;
+    column-fill: balance;
+    background-color: antiquewhite;
+    -moz-column-width: 200px;
+    column-width: 100px;
+    margin: 50px;
+}
+
+.margin-medium {
+    margin-right: 2%;
+}
+
+.bg {
+    background-color: bisque;
+    padding: .3%;
+}
+
+
+.dark {
+    background-color: rgb(43, 41, 41);
+}
+.dark-l {
+    background-color: rgb(51, 50, 49);
+    border-radius: 8px;
+}
+.orange {
+    color: orange;
+}
+
+.white {
+    color: white;
+}
+
+.title{
+    font-size: 150%;
+}
+
+.blue{
+    color: rgb(68, 182, 248);
+}
+.orange-bg {
+    background-color: rgb(226, 149, 6);
+}
+
+.dark-text {
+    color: rgb(43, 41, 41);
+}
+
+.dark-text:hover {
+    color: rgb(0, 0, 0);
+}
+
+.right-side {
+    text-align: right;
+}
+
+.left-side {
+    text-align: left;
+}
+
+.center-side {
+    text-align: center;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(46, 44, 44, 0.521);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-transparent {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(46, 44, 44, 0.521);
+    transition: all 1s;
+
+}
+
+
+.modal-content2 {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+
+.modal-content-dark {
+    background-color: rgb(51, 50, 49);
+    border-radius: 8px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(73, 72, 72);
+    color: rgb(161, 148, 148);
+    width: 80%;
+}
+
+.orange-border{
+    border: 1px orange solid;
+    box-shadow: 0.5em 1em 3em .9em rgb(85, 63, 23);
+    transition: all .2s;
+    border-radius: 9px;
+    margin-bottom: 10px;
+}
+
+.orange-border:hover{
+    box-shadow:  -0.17em -0.1em .8em 0.1em rgb(235, 156, 11) ;
+}
+
+.livetext{
+    transition: all .5s;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.livetext:hover{
+    color: rgb(96, 96, 245);
+}
+
+.orange-border:hover .livetext{
+    animation-name: livetext;
+    animation-duration: .2s;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes livetext{
+    0%{
+        color:white;
+        background-color: black;
+        left: 0;
+    }
+    100%{
+        color: orange;
+        background-color: rgb(66, 60, 43);
+        padding: .5%;
+        font-size: 170%;
+        left: 1.3em;
+    }
+}
+
+
+.orange-border-d{
+    border: 1px orange solid;
+    box-shadow: 0.5em 1em 1em 1em rgb(85, 63, 23);
+    transition: all .4s;
+}
+
+.orange-border-d:hover{
+    box-shadow:  -0.17em -0.2em 02em 0.1em rgb(145, 98, 12) ;
+}
+
+
+.livetext-mega{
+    transition: all .5s;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.livetext-mega:hover{
+    color: rgb(96, 96, 245);
+}
+
+.orange-border:hover .livetext-mega{
+    animation-name: livetext-mega;
+    animation-duration: .2s;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes livetext-mega{
+    0%{
+        color:white;
+        background-color: black;
+        left: 0;
+    }
+    100%{
+        color: orange;
+        background-color: rgb(66, 60, 43);
+        padding: .5%;
+        font-size: 260%;
+        left: .2em;
+    }
+}
+.selector-dark{
+    transition: .4s;
+}
+
+.selector-dark:hover{
+    background-color: rgb(32, 31, 31);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 20px;
+}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<script>
+  showLoading()
+</script>
+<div class="main">
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="metric">
+            <img style="width: 60px; height: 60px; margin-right:10px; float: left;" src="{{factory.factory_logo.url}}"
+              class="img-circle" />
+            <div class="media-body">
+              <h5 class="panel-title">
+                <h3 style="margin: 0px"><b class="orange">{{factory.factory_name}}</b></h3>
+                <br />
+                Since {{factory.date_created}}<br />
+                Altitude 20 |Temperature 30
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="metric">
+            <b>auction information</b>
+            {% for auction in auctions%}
+            <div class="dark-l panel-body">
+              <span class="title orange">Ongoing Auction</span><br>
+              <span>Auction No. {{auction.pk}}</span><br>
+              <span>Tonnes {{auction.tonnes}}</span><br>
+              <span>${{auction.price_per_tonne}} per tonne</span><br>
+              <span>{{auction.coffee_type}}</span><br>
+              <span>{{auction.tonnes_left}} tonne{{auction.tonnes_left|pluralize}} Left</span><br>
+              <a href="{%url 'transactions:view_market' auction.pk%}">Buy Form this Auction</a>
+            </div>
+            {%endfor%}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="metric">
+            <h4><b class="orange">Legal documentation</b><br />
+              {%if factory.trade_license%}
+              <h3>Trade License</h3>
+              <a href="{{factory.trade_license.url}}">Download Copy of license</a>
+              <br><span>Content Validated</span>
+              {%else%}
+              <span>NO LICENSE</span>
+              {%endif%}
+          </div>
+          <div class="metric">
+            <h4><b class="orange">Factory Bio</b></h4>
+            <p style="align-items: left;">
+              <div>
+                <span class="text">
+                  {{factory.factory_bio}}
+                </span>
+              </div>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="metric">
+            {{factory.googlemap|safe}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

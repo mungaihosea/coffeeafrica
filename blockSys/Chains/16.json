@@ -1,0 +1,50 @@
+[
+    {
+        "index": 0,
+        "previous hash": null,
+        "dificulty": 0,
+        "work level": 0,
+        "data": {
+            "blockType": "Genesis Block"
+        },
+        "hash": "0dff3409342d0d8b219a234d6fd45a05d4c777b1180055fe56e32af8ca3a95df"
+    },
+    {
+        "index": 1,
+        "previous hash": "0dff3409342d0d8b219a234d6fd45a05d4c777b1180055fe56e32af8ca3a95df",
+        "dificulty": 2,
+        "work level": 248,
+        "data": {
+            "id": 16,
+            "auction_id": 5,
+            "amount": "5",
+            "status": 0,
+            "date_placed": "2020/2/7",
+            "expected_date": "2020-02-11",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": null,
+            "shipping_id": null
+        },
+        "hash": "0008c36f14a00ec83602f46501d94e85ce54fd752af3d3cafb3516981b695da3"
+    },
+    {
+        "index": 2,
+        "previous hash": "0008c36f14a00ec83602f46501d94e85ce54fd752af3d3cafb3516981b695da3",
+        "dificulty": 2,
+        "work level": 107,
+        "data": {
+            "id": 16,
+            "auction_id": 5,
+            "amount": 5,
+            "status": 1,
+            "date_placed": "2020/2/7",
+            "expected_date": "2020/2/11",
+            "buyer": 1,
+            "employee": 1,
+            "shipping_address": null,
+            "shipping_id": null
+        },
+        "hash": "00f6a35d4a661ed178b687038c357da09f0aee69173347acbb9a8a34d2cd843a"
+    }
+]

@@ -1,0 +1,88 @@
+[
+    {
+        "index": 0,
+        "previous hash": null,
+        "dificulty": 0,
+        "work level": 0,
+        "data": {
+            "blockType": "Genesis Block"
+        },
+        "hash": "0dff3409342d0d8b219a234d6fd45a05d4c777b1180055fe56e32af8ca3a95df"
+    },
+    {
+        "index": 1,
+        "previous hash": "0dff3409342d0d8b219a234d6fd45a05d4c777b1180055fe56e32af8ca3a95df",
+        "dificulty": 2,
+        "work level": 280,
+        "data": {
+            "id": 12,
+            "auction_id": 6,
+            "amount": "3",
+            "status": 0,
+            "date_placed": "2020/2/6",
+            "expected_date": "2020-02-03",
+            "buyer": 1,
+            "employee": 4,
+            "shipping_address": null,
+            "shipping_id": null
+        },
+        "hash": "00e3b019cd8de6a0945f9adece05329b42fe115e732464879d341db9aa21fd65"
+    },
+    {
+        "index": 2,
+        "previous hash": "00e3b019cd8de6a0945f9adece05329b42fe115e732464879d341db9aa21fd65",
+        "dificulty": 2,
+        "work level": 726,
+        "data": {
+            "id": 12,
+            "auction_id": 6,
+            "amount": 3,
+            "status": 1,
+            "date_placed": "2020/2/6",
+            "expected_date": "2020/2/3",
+            "buyer": 1,
+            "employee": 4,
+            "shipping_address": null,
+            "shipping_id": null
+        },
+        "hash": "00a8f27b3e3fbb2f81a9a6e74cbbbddb6aa54b53bfce33f972b542bb30942d5a"
+    },
+    {
+        "index": 3,
+        "previous hash": "00a8f27b3e3fbb2f81a9a6e74cbbbddb6aa54b53bfce33f972b542bb30942d5a",
+        "dificulty": 2,
+        "work level": 139,
+        "data": {
+            "id": 12,
+            "auction_id": 6,
+            "amount": 3,
+            "status": 2,
+            "date_placed": "2020/2/6",
+            "expected_date": "2020/2/3",
+            "buyer": 1,
+            "employee": 4,
+            "shipping_address": "ZipCode: +633     Town: Myanmar    Address: box 908 bokumah",
+            "shipping_id": "t-5353jkdf"
+        },
+        "hash": "0075e2075a7defe3131ac4274d24f33d8238dd17f993a67135e5d303a95b66f6"
+    },
+    {
+        "index": 4,
+        "previous hash": "0075e2075a7defe3131ac4274d24f33d8238dd17f993a67135e5d303a95b66f6",
+        "dificulty": 2,
+        "work level": 482,
+        "data": {
+            "id": 12,
+            "auction_id": 6,
+            "amount": 3,
+            "status": 3,
+            "date_placed": "2020/2/6",
+            "expected_date": "2020/2/3",
+            "buyer": 1,
+            "employee": 4,
+            "shipping_address": "ZipCode: +633     Town: Myanmar    Address: box 908 bokumah",
+            "shipping_id": "t-5353jkdf"
+        },
+        "hash": "00d9cc69c2e87ece4f3286f2fa87bd33736e894747df73ec768ab0921a65564d"
+    }
+]

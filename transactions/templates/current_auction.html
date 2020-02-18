@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<div class="main">
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <div class="container-fluid">
+      <div id="main_metric" class="metric">
+        <div class="metric">
+          <div class="media">
+            <div class="metric">
+              <img
+                style="width: 60px; height: 60px; margin-right:10px; float: left;"
+                src="{{auction.factory.factory_logo.url}}"
+                class="img-circle"
+              />
+              <div class="media-body">
+                <h5 class="panel-title">
+                  <h3 style="margin: 0px">{{auction.factory.factory_name}}</h3>
+                  <br />
+                  Auction id {{auction.id}}<br />
+                  {{auction.date_placed}}
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="metric">
+            no of bids {{auction.bid_count}}<br />
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Order No.</th>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th>Date &amp; Time</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for order in order_queryset %}
+                <tr>
+                  <td>
+                    <a href="/transactions/view_order/{{order.id}}/"
+                      >{{order.id}}</a
+                    >
+                  </td>
+                  <td>{{order.employee.factory.factory_name}}</td>
+                  <td>{{order.amount}} tonnes</td>
+                  <td>{{order.date_placed}}</td>
+                  {% if order.status == "awaiting confirmation" %}
+                  <td>
+                    <span class="label label-warning">{{order.status}}</span>
+                  </td>
+                  {% elif order.status == "order confirmed" %}
+                  <td>
+                    <span class="label label-success">{{order.status}}</span>
+                  </td>
+                  {% endif %}
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
