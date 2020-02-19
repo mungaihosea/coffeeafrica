@@ -1,7 +1,12 @@
 {% load static %}
-<nav class="navbar navbar-default navbar-fixed-top" style="background-color: rgb(32, 30, 30);">
+<nav
+  class="navbar navbar-default navbar-fixed-top"
+  style="background-color: rgb(32, 30, 30);"
+>
   <div class="brand orange" style="background-color: transparent;">
-    <a class="title orange" href="{%url 'accounts:homepage'%}">CoffeeAfrica.net</a>
+    <a class="title orange" href="{%url 'accounts:homepage'%}"
+      >CoffeeAfrica.net</a
+    >
   </div>
   <div class="container-fluid">
     <div class="navbar-btn">
@@ -11,8 +16,15 @@
     </div>
     <form class="navbar-form navbar-left">
       <div class="input-group">
-        <input type="text" value="" class="form-control" placeholder="Search dashboard..." />
-        <span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+        <input
+          type="text"
+          value=""
+          class="form-control"
+          placeholder="Search dashboard..."
+        />
+        <span class="input-group-btn"
+          ><button type="button" class="btn btn-primary">Go</button></span
+        >
       </div>
     </form>
 
@@ -26,8 +38,10 @@
           <ul class="dropdown-menu notifications">
             {%for notification in notifications%}
             <li>
-              <a href="/{{notification.app_name}}/{{notification.action}}/{{notification.id}}/"
-                class="notification-item"><span class="dot bg-success"></span>
+              <a
+                href="/{{notification.app_name}}/{{notification.action}}/{{notification.id}}/"
+                class="notification-item"
+                ><span class="dot bg-success"></span>
                 {{notification.message}}
               </a>
             </li>
@@ -51,9 +65,11 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+            ><i class="lnr lnr-question-circle"></i>
             <span>Help</span>
-            <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+            <i class="icon-submenu lnr lnr-chevron-down"></i
+          ></a>
           <ul class="dropdown-menu">
             <li><a href="#">Basic Use</a></li>
             <li><a href="#">Working With Data</a></li>
@@ -62,22 +78,32 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{% static 'assets/img/user.png' %}"
-              class="img-circle" alt="Avatar" />
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+            ><img
+              src="{% static 'assets/img/user.png' %}"
+              class="img-circle"
+              alt="Avatar"/>
             <span>{{user.username}}</span>
-            <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+            <i class="icon-submenu lnr lnr-chevron-down"></i
+          ></a>
           <ul class="dropdown-menu">
             <li>
-              <a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a>
+              <a href="#"
+                ><i class="lnr lnr-user"></i> <span>My Profile</span></a
+              >
             </li>
             <li>
-              <a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a>
+              <a href="#"
+                ><i class="lnr lnr-envelope"></i> <span>Message</span></a
+              >
             </li>
             <li>
               <a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a>
             </li>
             <li>
-              <a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a>
+              <a href="{% url 'accounts:logout' %}"
+                ><i class="lnr lnr-exit"></i> <span>Logout</span></a
+              >
             </li>
           </ul>
         </li>

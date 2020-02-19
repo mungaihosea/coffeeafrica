@@ -3,7 +3,7 @@ from django.contrib.auth import login as login_user, logout, authenticate
 from django.contrib.auth.models import User
 from transactions import calenderutil
 from django.shortcuts import redirect
-from .models import SellerFactoryEmployee, SellerFactory
+from .models import SellerFactoryEmployee, SellerFactory, Buyer
 from django.views.generic import View
 from django.urls import reverse
 from transactions.models import Order, Auction
@@ -16,6 +16,9 @@ def homepage(request):
 def profile(request):
     return render(request, "profile.html", {})
 
+
+def logout(request):
+    return redirect("accounts:homepage")
 
 def login(request):
     error = None

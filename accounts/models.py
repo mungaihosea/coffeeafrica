@@ -33,7 +33,11 @@ class SellerFactoryEmployee(models.Model):
 
 class Buyer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    use_case = models.TextField()
+    country = models.CharField(max_length = 30, null = True)
+    address = models.TextField(null = True)
+    profile_picture = models.ImageField(null = True)
+    phone = models.IntegerField(null = True)
+    use_case = models.TextField(null = True)
 
     def __str__(self):
         return self.user.username

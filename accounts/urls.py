@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import homepage, profile, login, create_account, dashboard, GetFactoriesView, create_buyer_account, create_seller_account
+from .views import homepage, profile, login, create_account, dashboard, GetFactoriesView, create_buyer_account, create_seller_account, logout
 
 namespace = "accounts"
 
@@ -12,4 +12,5 @@ urlpatterns = [
     path('create_account/', create_account, name= "create_account"),
     path('create_buyer_account/', create_buyer_account, name = 'create_buyer_account'),
     path('create_seller_account/', create_seller_account, name = 'create_seller_account'),
+    path("logout/", logout, name = "logout")
 ]

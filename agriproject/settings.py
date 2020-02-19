@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'accounts',
     'transactions',
     'feedback',
-    'backup'
+    'backup',
+    'blog',
 ]
 
 MIDDLEWARE = [
