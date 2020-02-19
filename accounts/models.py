@@ -23,9 +23,11 @@ class SellerFactory(models.Model):
 
 class SellerFactoryEmployee(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    factory = models.ForeignKey(
-        SellerFactory, on_delete=models.CASCADE, null=False, blank=False
-    )
+    factory = models.ForeignKey(SellerFactory, on_delete = models.CASCADE)
+    country = models.CharField(max_length = 30 , null = True)
+    address = models.TextField(null = True)
+    profile_picture = models.ImageField(null = True)
+    phone = models.IntegerField(null = True)
 
     def __str__(self):
         return self.user.username

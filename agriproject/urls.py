@@ -13,6 +13,7 @@ urlpatterns = [
         include(("transactions.urls", "transactions"), namespace="transactions"),
     ),
     path("feedback/", include(("feedback.urls", "feedback"), namespace="feedback")),
+    path("blog/", include(("blog.urls", "blog"), namespace = "blog")),
 ]
 
 if settings.DEBUG:
